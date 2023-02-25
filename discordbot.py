@@ -19,11 +19,11 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content == f'{PREFIX}call':
-        await message.channel.send("callback!")
+    if message.content == (f'금천구를 소개해줘'):
+        await message.channel.send("금천구는 개발중인 로블록스 KR:RP형태의 서버입니다.")
 
-    if message.content.startswith(f'{PREFIX}hello'):
-        await message.channel.send('Hello!')
+    if message.content.startswith(f'안녕하세요!'):
+        await message.channel.send('금천구에 오신걸 환영합니다!')
 
 
 try:
