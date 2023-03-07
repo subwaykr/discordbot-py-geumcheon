@@ -36,6 +36,12 @@ async def on_member_remove(member):
     channel = member.server.get_channel("1078978489836896318")
     fmt = '{0.mention}님, 서울특별시 금천구 였습니다. 안녕히가십시오!'
     await client.send_message(channel, fmt.format(member, member.server))
+    
+@client.event    
+async def on_member_join(member):
+    msg = '{0.mention}님! 여기는 서울특별시 금천구 입니다. 환영합니다!'
+    channel = bot.get_channel(1069624743944278179)
+    await channel.send(msg) # channel에 보내기
 
 
 try:
