@@ -28,13 +28,13 @@ async def on_message(message):
     if message.content.startswith(f'안녕하세요!'):
         await message.channel.send('금천구에 오신걸 환영합니다!')
         
-@bot.event
+@client.event
 async def on_member_join(member):
     fmt = '{0.mention}님! 여기는 서울특별시 금천구 입니다. 환영합니다!'
     channel = member.server.get_channel(1069624743944278179)
     await client.send_message(channel, fmt.format(member, member.server))
  
-@bot.event
+@client.event
 async def on_member_remove(member):
     channel = member.server.get_channel(1069624743944278179)
     fmt = '{0.mention}님, 서울특별시 금천구 였습니다. 안녕히가십시오!'
