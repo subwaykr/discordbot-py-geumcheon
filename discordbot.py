@@ -8,8 +8,6 @@ load_dotenv()
 intents = discord.Intents.all()
 intents.members = True
 
-bot = commands.Bot(command_prefix=strings.PREFIX, intents=intents)
-
 PREFIX = os.environ['PREFIX']
 TOKEN = os.environ['TOKEN']
 
